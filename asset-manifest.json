@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/SabaAV_CV/static/css/main.a6102e76.css",
+    "main.js": "/SabaAV_CV/static/js/main.2dc772ea.js",
+    "static/media/Worldskills_Georgia.jpg": "/SabaAV_CV/static/media/Worldskills_Georgia.0899c0a10eb157479213.jpg",
+    "static/media/LinkedIn_Logo.png": "/SabaAV_CV/static/media/LinkedIn_Logo.160a76a4291bc749f747.png",
+    "static/media/Worldskills_International.png": "/SabaAV_CV/static/media/Worldskills_International.d4eb7010eadcf6bb46f5.png",
+    "static/media/facebook_logo.png": "/SabaAV_CV/static/media/facebook_logo.30019f6cf4a33551b09b.png",
+    "static/media/ManoloMono.otf": "/SabaAV_CV/static/media/ManoloMono.c073296eaed39639eeca.otf",
+    "index.html": "/SabaAV_CV/index.html",
+    "main.a6102e76.css.map": "/SabaAV_CV/static/css/main.a6102e76.css.map",
+    "main.2dc772ea.js.map": "/SabaAV_CV/static/js/main.2dc772ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6102e76.css",
+    "static/js/main.2dc772ea.js"
+  ]
+}
