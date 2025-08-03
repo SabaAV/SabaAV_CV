@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/SabaAV_CV/static/css/main.78197973.css",
-    "main.js": "/SabaAV_CV/static/js/main.78a23365.js",
+    "main.css": "/SabaAV_CV/static/css/main.456dfd0d.css",
+    "main.js": "/SabaAV_CV/static/js/main.4e72823e.js",
     "static/media/Worldskills_Georgia.jpg": "/SabaAV_CV/static/media/Worldskills_Georgia.0899c0a10eb157479213.jpg",
     "static/media/LinkedIn_Logo.png": "/SabaAV_CV/static/media/LinkedIn_Logo.160a76a4291bc749f747.png",
     "static/media/Worldskills_International.png": "/SabaAV_CV/static/media/Worldskills_International.d4eb7010eadcf6bb46f5.png",
     "static/media/facebook_logo.png": "/SabaAV_CV/static/media/facebook_logo.30019f6cf4a33551b09b.png",
     "static/media/ManoloMono.otf": "/SabaAV_CV/static/media/ManoloMono.c073296eaed39639eeca.otf",
     "index.html": "/SabaAV_CV/index.html",
-    "main.78197973.css.map": "/SabaAV_CV/static/css/main.78197973.css.map",
-    "main.78a23365.js.map": "/SabaAV_CV/static/js/main.78a23365.js.map"
+    "main.456dfd0d.css.map": "/SabaAV_CV/static/css/main.456dfd0d.css.map",
+    "main.4e72823e.js.map": "/SabaAV_CV/static/js/main.4e72823e.js.map"
   },
   "entrypoints": [
-    "static/css/main.78197973.css",
-    "static/js/main.78a23365.js"
+    "static/css/main.456dfd0d.css",
+    "static/js/main.4e72823e.js"
   ]
 }
