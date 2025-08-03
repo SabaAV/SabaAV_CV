@@ -1,8 +1,40 @@
 import facebook from "../assets/Images/facebook_logo.png";
 import github from "../assets/Images/github_logo.png";
 import linkedin from "../assets/Images/LinkedIn_Logo.png";
+import { useState } from "react";
 
 function Contacts() {
+  const [status, setStatus] = useState(""); // состояние для статуса отправки
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // отменяем стандартную отправку формы
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(
+        "https://formsubmit.co/ajax/avlokhashvili.saba@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        }
+      );
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
   return (
     <div className="ContactsDiv">
       <h1>Contacts</h1>
@@ -40,12 +72,12 @@ function Contacts() {
         </div>
         <div className="ContactsRight">
           <h2>Contact Form</h2>
-          <form
-            action="https://formsubmit.co/avlokhashvili.saba@gmail.com"
-            method="POST"
-            className="ContactForm"
-          >
-            {/* Защита от спама */}
+          <form onSubmit={handleSubmit} className="ContactForm">
+            <input
+              type="hidden"
+              name="_next"
+              value="https://sabaav.github.io/SabaAV_CV"
+            />
             <input type="hidden" name="_captcha" value="false" />
 
             <label>Name</label>
@@ -63,6 +95,12 @@ function Contacts() {
             <textarea name="message" required placeholder="Your Message" />
 
             <button type="submit">Send</button>
+            {status === "success" && (
+              <p style={{ color: "green" }}>Message sent ✅</p>
+            )}
+            {status === "error" && (
+              <p style={{ color: "red" }}>Error sending message ❌</p>
+            )}
           </form>
         </div>
       </div>
