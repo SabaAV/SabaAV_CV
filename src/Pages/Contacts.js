@@ -95,11 +95,10 @@ function Contacts() {
             <textarea name="message" required placeholder="Your Message" />
 
             <button type="submit">Send</button>
-            {status === "success" && (
-              <p style={{ color: "green" }}>Message sent ✅</p>
-            )}
+            <p style={{ color: "green" }}>Message sent</p>
+            {status === "success" && <p>Message sent</p>}
             {status === "error" && (
-              <p style={{ color: "red" }}>Error sending message ❌</p>
+              <p style={{ color: "red" }}>Error sending message</p>
             )}
           </form>
         </div>
