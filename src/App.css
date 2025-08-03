@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Manolo-Mono;
+  src: url(./assets/Fonts/ManoloMono.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 93vh;
+  width: 100%;
+  display: flex;
+  background-color: #1f1f1f;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+header > h1,
+header > h2 {
+  font-family: Manolo-Mono;
+  padding: 10px;
+  background-color: #1f1f1f;
+  z-index: 99;
+}
+
+header h1 {
+  font-size: 56px;
+  border-radius: 15px;
+}
+.NumberContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.ZeroOne {
+  position: absolute;
+  pointer-events: none;
+  z-index: 50;
+  animation: fall 30s linear infinite;
+  font-size: 24px;
+}
+
+/* Пример анимации падения */
+@keyframes fall {
+  0% {
+    transform: translateY(-2000%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2000%);
+    opacity: 0;
+  }
+}
+
+/* .navstyle {
+  background-color: #b0b0b0 !important;
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.navstyle > .NavInnerStyle {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.navstyle > .NavInnerStyle .NavLink a {
+  color: #1f1f1f;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s 0s all linear;
+}
+
+.navstyle > ul li:hover {
+  color: white;
+} */
+.custom-navbar {
+  background-color: #b0b0b0;
+  height: 7vh;
+  z-index: 99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Горизонтальное меню (только на пк) */
+.custom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+/* Стили ссылок */
+.custom-nav .nav-link {
+  color: #1f1f1f;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+/* Hover эффект */
+.custom-nav .nav-link:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+    0 0 15px rgba(255, 255, 255, 0.7);
+}
+.AboutDiv {
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2vh 20%;
+  padding-top: 8vh;
+}
+.AboutDiv p {
+  font-size: 20px;
+}
+.AboutDiv h1 {
+  font-family: Manolo-Mono;
+}
+.visible {
+  display: flex !important;
+}
+.AboutMe {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 5%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+  opacity: 0;
+}
+.AboutMe.visible {
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  opacity: 1;
+}
+.AboutMe > h1 {
+  text-align: center;
+}
+
+.AboutRow {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AboutLeftSide {
+  width: 45%;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 25px;
+  padding: 30px 3%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.AboutLeftSide.visible {
+  animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  opacity: 1;
+}
+
+.AboutRightSide {
+  width: 45%;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 25px;
+  padding: 30px 3%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* margin-left: 55%; */
+  text-align: right;
+}
+
+.AboutRightSide.visible {
+  animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  opacity: 1;
+}
+
+.AwardsDiv {
+  background-color: #1f1f1f;
+  color: white;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4vh 20%;
+  padding-top: 8vh;
+}
+
+.AwardsDiv > h1 {
+  font-size: 48px;
+  font-family: Manolo-Mono;
+}
+
+.AwardsList {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Award {
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.AwardsImage {
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.Award img {
+  width: 100%;
+  padding: 15px;
+}
+
+.ЕxperiencesDiv {
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vh 10%;
+  padding-top: 8vh;
+  transition: 1s 0s ease all;
+}
+
+.ЕxperiencesDiv p {
+  font-size: 20px;
+}
+.ЕxperiencesDiv h1 {
+  font-size: 48px;
+  font-family: Manolo-Mono;
+}
+
+.ЕxperiencesList {
+  width: 100%;
+  height: 70%;
+  /* background-color: #1f1f1f; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.ЕxperiencesRow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5%;
+  /* display: none; */
+}
+
+.Еxperience {
+  width: 50%;
+  height: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.ЕxperiencesImage {
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.Еxperience img {
+  width: 100%;
+}
+
+.ProjectsDiv {
+  background-color: #1f1f1f;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vh 10%;
+  padding-top: 8vh;
+  transition: 1s 0s ease all;
+}
+.ProjectsDiv p {
+  font-size: 20px;
+}
+.ProjectsDiv h1 {
+  font-size: 48px;
+  font-family: Manolo-Mono;
+}
+
+.ProjectsList {
+  width: 100%;
+  height: 70%;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.ProjectsRow {
+  width: 100%;
+  height: 250px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  display: none;
+}
+.Project {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(114, 0, 0);
+}
+
+.ShowMoreBtn {
+  width: 100px;
+  height: 100px;
+  background-color: #b0b0b0;
+  color: black;
+  border-radius: 50%;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.ShowMoreBtn:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.ShowMoreBtn:active {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.ContactsDiv {
+  background-color: #1f1f1f;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4vh 20%;
+  padding-top: 8vh;
+}
+
+.ContactsDiv > h1 {
+  font-size: 48px;
+  font-family: Manolo-Mono;
+}
+
+.InfoContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ContactsRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.ContactsLeft {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.ContactsLeft ul {
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.Socials {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Socials a {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.Socials img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+.ContactForm {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.ContactsLeft h2,
+.ContactsRight h2 {
+  font-family: Manolo-Mono;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ContactForm label {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.ContactForm input,
+.ContactForm textarea {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+}
+.ContactForm textarea {
+  height: 150px;
+}
+.ContactForm button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #b0b0b0;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.ContactForm button:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+@media (max-width: 991px) {
+  header {
+    height: 65vh;
+    padding: 0 5%;
+  }
+  header > h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+  header > h2 {
+    font-size: 24px;
+  }
+
+  .navbar-collapse {
+    background-color: #b0b0b0;
+    position: absolute;
+    width: 100%;
+    top: 56px; /* высота навбара */
+    left: 0;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+  }
+
+  .custom-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .custom-nav .nav-link {
+    padding: 0.75rem;
+    font-size: 18px;
+  }
+  .AboutDiv {
+    height: auto;
+    padding: 2vh 5%;
+  }
+  .AboutRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AboutRow div,
+  .AboutMe {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .AwardsDiv {
+    height: auto;
+    padding: 2vh 2%;
+  }
+  .AwardsList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AwardsList .Award {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .experiencesDiv {
+    height: auto;
+    padding: 2vh 5%;
+  }
+  .ЕxperiencesList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ЕxperiencesRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Еxperience {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .ContactsDiv {
+    height: auto;
+    padding: 2vh 5%;
+  }
+
+  .InfoContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ContactsLeft,
+  .ContactsRight {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .ContactsLeft ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ContactsLeft ul li {
+    margin-bottom: 10px;
+  }
+  .Socials {
+    align-items: center;
+  }
+  .Socials a {
+    width: 80px;
+    height: 80px;
+  }
+  .ContactForm {
+    width: 100%;
+    height: auto;
+  }
+  .ContactForm input,
+  .ContactForm textarea {
+    margin-bottom: 20px;
+  }
+}
