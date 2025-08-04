@@ -437,7 +437,7 @@ header h1 {
   flex-direction: column;
 }
 .ContactsLeft {
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: space-around;

@@ -55,6 +55,12 @@ function Contacts() {
             <li>Phone: 592 18 24 42</li>
             <li>Address: Vake Bagebi</li>
           </ul>
+          <h2>Languages known:</h2>
+          <ul>
+            <li>Georgian: Native or bilingual proficiency</li>
+            <li>English: Limited working proficiency</li>
+            <li>Russian: Native or bilingual proficiency</li>
+          </ul>
           <div className="Socials">
             <a
               href="https://www.facebook.com/saba.avlokhashvili.2025"
