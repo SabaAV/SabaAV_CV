@@ -1,10 +1,10 @@
 import facebook from "../assets/Images/facebook_logo.png";
 import github from "../assets/Images/github_logo.png";
 import linkedin from "../assets/Images/LinkedIn_Logo.png";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Contacts() {
-  const [status, setStatus] = useState(""); // состояние для статуса отправки
+  const [status, setStatus] = useState("waiting"); // состояние для статуса отправки
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // отменяем стандартную отправку формы
@@ -34,6 +34,15 @@ function Contacts() {
       setStatus("error");
     }
   };
+  useEffect(() => {
+    if (status !== "waiting") {
+      const timer = setTimeout(() => {
+        setStatus("waiting");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   return (
     <div className="ContactsDiv">
@@ -94,12 +103,24 @@ function Contacts() {
             <label>Message</label>
             <textarea name="message" required placeholder="Your Message" />
 
-            <button type="submit">Send</button>
-            <p style={{ color: "green" }}>Message sent</p>
-            {status === "success" && <p>Message sent</p>}
+            <button
+              className={
+                status === "success"
+                  ? "bg-success text-white"
+                  : status === "error"
+                  ? "bg-danger text-white"
+                  : ""
+              }
+              type="submit"
+            >
+              {status === "waiting" && "Send"}
+              {status === "success" && "Message sent"}
+              {status === "error" && "Error sending message"}
+            </button>
+            {/* {status === "success" && <p>Message sent</p>}
             {status === "error" && (
               <p style={{ color: "red" }}>Error sending message</p>
-            )}
+            )} */}
           </form>
         </div>
       </div>

@@ -72,7 +72,7 @@ function About() {
           style={{ animationDuration: 1.5 + "s" }}
         >
           <h1>Design & 3D </h1>
-          <p>Programms:</p>
+          <p>Programs:</p>
           <p>Photoshop, Illustrator, Figma</p>
           <p>3D design:</p>
           <p>Blender</p>
@@ -87,7 +87,7 @@ function About() {
         >
           <h1>BackEnd</h1>
           <p>Programming languages I Know:</p>
-          <p>HTML, CSS, Javascript, Typescript</p>
+          <p>Javascript, Typescript, PHP</p>
           <p>Frameworks I Know:</p>
           <p>React, Angular, Bootstrap</p>
         </div>
