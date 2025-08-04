@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SabaAV_CV/static/css/main.456dfd0d.css",
-    "main.js": "/SabaAV_CV/static/js/main.df5f978b.js",
+    "main.js": "/SabaAV_CV/static/js/main.d06e4e54.js",
     "static/media/Worldskills_Georgia.jpg": "/SabaAV_CV/static/media/Worldskills_Georgia.0899c0a10eb157479213.jpg",
     "static/media/LinkedIn_Logo.png": "/SabaAV_CV/static/media/LinkedIn_Logo.160a76a4291bc749f747.png",
     "static/media/Worldskills_International.png": "/SabaAV_CV/static/media/Worldskills_International.d4eb7010eadcf6bb46f5.png",
@@ -9,10 +9,10 @@
     "static/media/ManoloMono.otf": "/SabaAV_CV/static/media/ManoloMono.c073296eaed39639eeca.otf",
     "index.html": "/SabaAV_CV/index.html",
     "main.456dfd0d.css.map": "/SabaAV_CV/static/css/main.456dfd0d.css.map",
-    "main.df5f978b.js.map": "/SabaAV_CV/static/js/main.df5f978b.js.map"
+    "main.d06e4e54.js.map": "/SabaAV_CV/static/js/main.d06e4e54.js.map"
   },
   "entrypoints": [
     "static/css/main.456dfd0d.css",
-    "static/js/main.df5f978b.js"
+    "static/js/main.d06e4e54.js"
   ]
 }
